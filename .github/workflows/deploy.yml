@@ -21,6 +21,7 @@ jobs:
           key: ${{ secrets.EC2_KEY }}
           source: "index.html"
           target: "/var/www/html"
+          overwrite: true
 
       - name: SSH into EC2 and restart NGINX
         uses: appleboy/ssh-action@v1.0.0
